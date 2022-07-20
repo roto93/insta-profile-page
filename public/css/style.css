@@ -41,7 +41,7 @@ img.icon#JapanGo {
   /* border: 1px black solid; */
   max-width: 250px;
   width:80%;
-  aspect-ratio: 1;
+  /* aspect-ratio: 1; */
   border-radius: 1000px;
   margin-bottom: 2em;
   background-image: url('../assets/images/avatar.jpg');
