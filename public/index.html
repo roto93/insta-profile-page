@@ -6,16 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guan-Ting Su</title>
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inder&family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
     rel="stylesheet">
-  <!-- <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>  -->
   <script src="particles.min.js"></script>
-  <!-- <script src="http://threejs.org/examples/js/libs/stats.min.js"></script> -->
   <script defer>
     particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
       console.log('callback - particles.js config loaded');
@@ -27,11 +25,14 @@
   <div id="particles-js" class="background"></div>
   <div class="container">
     <div class="avatar" data-tilt data-tilt-scale="1.05"></div>
+
     <div class="username-box">
       <text class="username">@pi_3.1415</text>
       <text class="name">Guan-Ting Su</text>
     </div>
-    <ul class="link-block">
+
+
+    <ul class="link-container">
       <li class="links" onclick="window.location='https://github.com/roto93';">
         <img class="icon" src="assets/icons/github.svg">
         <text class="link-title">Github</text>
@@ -42,39 +43,36 @@
         <text class="link-title">LinkedIn</text>
       </li>
 
-
-
       <li class="links" onclick="window.location='https://roto93.github.io'">
-        <img class="icon" src="assets/icons/Blog.svg">
+        <img class="icon" src="assets/icons/Blog.svg" alt="Blogger">
         <text class="link-title">Blog</text>
       </li>
-
-
-      <li class="links" onclick="window.location='https://play.google.com/store/apps/details?id=com.roto93.JPY_App'">
-        <img class="icon" src="assets/icons/JapanGo.svg">
-        <text class=" link-title">JapanGo</text>
-      </li>
-
-
-      <li class="links" onclick="window.location='http://solis.es.ntnu.edu.tw:5000/home'">
-        <img class="icon" src="assets/icons/observatory.svg">
-        <text class="link-title">TAN</text>
-      </li>
-
     </ul>
+
+    <h2 class="title">My Works</h2>
+
   </div>
-  <script>
-    const avatar = document.querySelector('.avatar')
+  <div class="work-container">
+    <div class="work-block JapanGo"
+      onclick="window.location='https://play.google.com/store/apps/details?id=com.roto93.JPY_App'">
+      <img class="work-background" src="./assets/images/JapanGo.jpg" alt="">
+    </div>
 
-    const winx = document.querySelector('body').offsetWidth
-    if (winx < 400) {
-      avatar.removeAttribute('data-tilt')
-    }
-    const width = avatar.offsetWidth
-    avatar.style.height = `${width}px`
-  </script>
-  <script type="text/javascript" src="vanilla-tilt.min.js"></script>
-
+    <div class="work-block TAN" onclick="window.location='http://solis.es.ntnu.edu.tw:5000/home'">
+      <img class="work-background" src="./assets/images/TAN-background.jpg" alt="">
+    </div>
+  </div>
 </body>
+<script>
+  const avatar = document.querySelector('.avatar')
+
+  const winx = document.querySelector('body').offsetWidth
+  if (winx < 400) {
+    avatar.removeAttribute('data-tilt')
+  }
+  const width = avatar.offsetWidth
+  avatar.style.height = `${width}px`
+</script>
+<script type="text/javascript" src="vanilla-tilt.min.js"></script>
 
 </html>
